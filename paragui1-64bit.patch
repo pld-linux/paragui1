@@ -1,0 +1,14 @@
++--- include/pgtimerobject.h 12 Mar 2004 18:46:38 -0000  1.1.2.6.2.3
+++++ include/pgtimerobject.h 9 May 2004 21:39:40 -0000
++@@ -33,7 +33,7 @@
++ #include "pgsignals.h"
++ #include <map>
++
++-typedef Uint32 PG_TimerID;
+++typedef unsigned long PG_TimerID;
++
++ /**
++    @author Alexander Pipelka
++
++
+
