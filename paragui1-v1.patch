@@ -10,6 +10,18 @@ diff -urN paragui-1.0.4.org/configure.in paragui-1.0.4/configure.in
  
  CXXFLAGS="$STLPORT_FLAGS $CFLAGS $IMAGE_INCLUDE $RTTI_FLAGS $EXCEPTIONS_FLAGS"
  
+diff -urN paragui-1.0.4.org/data/Makefile.am paragui-1.0.4/data/Makefile.am
+--- paragui-1.0.4.org/data/Makefile.am	2004-04-24 19:24:20.302765376 +0200
++++ paragui-1.0.4/data/Makefile.am	2004-04-24 20:04:24.727237296 +0200
+@@ -23,7 +23,7 @@
+ 	(cd $(srcdir); zip -9 -r $(BUILDDIR)default_mac.zip default_mac.theme default -i *.png *.bmp *.theme)
+ 
+ 
+-paraguidatadir = $(datadir)/paragui
++paraguidatadir = $(datadir)/paragui1
+ 
+ paraguidata_DATA = \
+ 	default.zip \
 diff -urN paragui-1.0.4.org/include/Makefile.am paragui-1.0.4/include/Makefile.am
 --- paragui-1.0.4.org/include/Makefile.am	2004-04-24 19:24:20.120793040 +0200
 +++ paragui-1.0.4/include/Makefile.am	2004-04-24 19:24:44.793042288 +0200
