@@ -1,0 +1,78 @@
+diff -urN paragui-1.0.4.org/configure.in paragui-1.0.4/configure.in
+--- paragui-1.0.4.org/configure.in	2004-04-24 19:24:20.112794256 +0200
++++ paragui-1.0.4/configure.in	2004-04-24 19:26:43.575984536 +0200
+@@ -581,7 +581,7 @@
+ fi
+ 
+ PARAGUI_CFLAGS="$STL_CFLAGS $FREETYPE_CFLAGS $SDL_CFLAGS $RTTI_FLAGS $EXTRA_FLAGS"
+-PARAGUI_LIBS="-lparagui $SDL_LIBS $IMAGE_LIBS $LIBEXPAT $FREETYPE_LIBS $EXTRA_LIBS $LIBSTDCPP"
++PARAGUI_LIBS="-lparagui1 $SDL_LIBS $IMAGE_LIBS $LIBEXPAT $FREETYPE_LIBS $EXTRA_LIBS $LIBSTDCPP"
+ 
+ CXXFLAGS="$STLPORT_FLAGS $CFLAGS $IMAGE_INCLUDE $RTTI_FLAGS $EXCEPTIONS_FLAGS"
+ 
+diff -urN paragui-1.0.4.org/include/Makefile.am paragui-1.0.4/include/Makefile.am
+--- paragui-1.0.4.org/include/Makefile.am	2004-04-24 19:24:20.120793040 +0200
++++ paragui-1.0.4/include/Makefile.am	2004-04-24 19:24:44.793042288 +0200
+@@ -1,4 +1,4 @@
+-libparaguiincludedir = $(includedir)/paragui
++libparaguiincludedir = $(includedir)/paragui1
+ 
+ libparaguiinclude_HEADERS = \
+ 	paraconfig.h \
+diff -urN paragui-1.0.4.org/Makefile.am paragui-1.0.4/Makefile.am
+--- paragui-1.0.4.org/Makefile.am	2004-04-24 19:24:20.103795624 +0200
++++ paragui-1.0.4/Makefile.am	2004-04-24 19:29:40.367108200 +0200
+@@ -4,7 +4,7 @@
+ 
+ DIST_SUBDIRS = $(SUBDIRS) sdk doc
+ 
+-bin_SCRIPTS = paragui-config
++bin_SCRIPTS = paragui1-config
+ 
+ EXTRA_DIST = \
+ 	paragui.m4 \
+@@ -25,7 +25,7 @@
+ m4data_DATA = paragui.m4
+ 
+ pkgconfigdir = $(prefix)/lib/pkgconfig
+-pkgconfig_DATA = paragui.pc
++pkgconfig_DATA = paragui1.pc
+ 
+ $(PACKAGE)-$(VERSION).tar.gz: dist
+ 
+diff -urN paragui-1.0.4.org/paragui-config.in paragui-1.0.4/paragui-config.in
+--- paragui-1.0.4.org/paragui-config.in	2004-04-24 19:24:20.116793648 +0200
++++ paragui-1.0.4/paragui-config.in	2004-04-24 19:24:36.670277136 +0200
+@@ -42,7 +42,7 @@
+       if test @includedir@ != /usr/include ; then
+         includes=-I@includedir@
+       fi
+-      echo $includes -I@includedir@/paragui @PARAGUI_CFLAGS@
++      echo $includes -I@includedir@/paragui1 @PARAGUI_CFLAGS@
+       ;;
+     --libs)
+       if [ "`uname`" = "SunOS" ]; then
+diff -urN paragui-1.0.4.org/src/Makefile.am paragui-1.0.4/src/Makefile.am
+--- paragui-1.0.4.org/src/Makefile.am	2004-04-24 19:24:20.154787872 +0200
++++ paragui-1.0.4/src/Makefile.am	2004-04-24 19:27:46.814370840 +0200
+@@ -2,16 +2,16 @@
+ 
+ DIST_SUBDIRS = draw font themes core widgets expat physfs
+ 
+-lib_LTLIBRARIES = libparagui.la
++lib_LTLIBRARIES = libparagui1.la
+ 
+-libparagui_la_SOURCES = \
++libparagui1_la_SOURCES = \
+ 	paragui.cpp
+ 
+-libparagui_la_LDFLAGS = \
++libparagui1_la_LDFLAGS = \
+ 	-release $(LT_RELEASE) \
+ 	-version-info $(LT_CURRENT):$(LT_REVISION):$(LT_AGE)
+ 
+-libparagui_la_LIBADD = \
++libparagui1_la_LIBADD = \
+ 	$(SDL_LIBS) \
+ 	$(IMAGE_LIBS) \
+ 	$(EXPAT_LIB) \
