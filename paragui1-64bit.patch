@@ -1,14 +1,12 @@
-+--- include/pgtimerobject.h 12 Mar 2004 18:46:38 -0000  1.1.2.6.2.3
-++++ include/pgtimerobject.h 9 May 2004 21:39:40 -0000
-+@@ -33,7 +33,7 @@
-+ #include "pgsignals.h"
-+ #include <map>
-+
-+-typedef Uint32 PG_TimerID;
-++typedef unsigned long PG_TimerID;
-+
-+ /**
-+    @author Alexander Pipelka
-+
-+
-
+diff -urN paragui-1.0.4.org/include/pgtimerobject.h paragui-1.0.4/include/pgtimerobject.h
+--- paragui-1.0.4.org/include/pgtimerobject.h	2004-05-22 13:43:43.680927616 +0200
++++ paragui-1.0.4/include/pgtimerobject.h	2004-05-22 13:44:05.370630280 +0200
+@@ -32,7 +32,7 @@
+ #include "paragui.h"
+ #include <map>
+ 
+-typedef Uint32 PG_TimerID;
++typedef unsigned long PG_TimerID;
+ 
+ /**
+ 	@author Alexander Pipelka
