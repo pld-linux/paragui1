@@ -1,11 +1,11 @@
---- paragui-1.0.2/src/core/pgtimerobject.cpp.orig	Wed May 29 15:56:08 2002
-+++ paragui-1.0.2/src/core/pgtimerobject.cpp	Wed Aug 28 17:00:23 2002
-@@ -67,7 +67,7 @@
+--- paragui-1.1.6/src/core/pgtimerobject.cpp.orig	2003-11-24 09:17:21.000000000 +0000
++++ paragui-1.1.6/src/core/pgtimerobject.cpp	2004-02-13 08:51:35.000000000 +0000
+@@ -64,7 +64,7 @@
  }
  
  Uint32 PG_TimerObject::callbackTimer(Uint32 interval, void* data) {
 -	PG_TimerID id = reinterpret_cast<PG_TimerID>(data);
 +	PG_TimerID id = (PG_TimerID)(data);
+ 	timermap[id]->sigTimer(timermap[id], id);
  	return timermap[id]->eventTimer(id, interval);
  }
- 
