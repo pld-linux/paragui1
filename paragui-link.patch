@@ -1,0 +1,10 @@
+--- paragui-1.1.6/src/Makefile.am.orig	2003-12-02 16:27:58.000000000 +0100
++++ paragui-1.1.6/src/Makefile.am	2004-02-13 00:23:38.976214984 +0100
+@@ -14,6 +14,7 @@
+ 	$(SIGC_LIBS) \
+ 	$(SDL_LIBS) \
+ 	$(EXPAT_LIB) \
++	$(FREETYPE_LIBS) \
+ 	$(PHYSFS_LIB) \
+ 	./draw/libpgdraw.la \
+ 	./font/libpgfont.la \
