@@ -9,7 +9,7 @@ Source0:	http://savannah.nongnu.org/download/paragui/paragui-%{version}.tar.gz
 # Source0-md5:	fc0cfcb31e28c2f7ff7e9900d3c5f651
 Patch0:		paragui-am18.patch
 Patch1:		paragui-link.patch
-Patch2:		paragui-64bit-workaround.patch
+Patch2:		%{name}-64bit-workaround.patch
 Patch3:		%{name}-v1.patch
 URL:		http://www.paragui.org/
 BuildRequires:	SDL-devel >= 1.2.6
