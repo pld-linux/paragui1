@@ -1,5 +1,5 @@
 Summary:	ParaGUI - A complete GUI/Windowing system for SDL
-Summary(pl):	ParaGUI - kompletne ∂rodowisko okienkowe dla SDL
+Summary(pl.UTF-8):   ParaGUI - kompletne ≈õrodowisko okienkowe dla SDL
 Name:		paragui1
 Version:	1.0.4
 Release:	2
@@ -29,12 +29,12 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 This library is a complete GUI/Windowing system for SDL.
 
-%description -l pl
-Kompletne ∂rodowisko okienkowe dla SDL.
+%description -l pl.UTF-8
+Kompletne ≈õrodowisko okienkowe dla SDL.
 
 %package devel
 Summary:	Includes and more to develop SDL GUI applications
-Summary(pl):	Pliki nag≥Ûwkowe dla ParaGUI
+Summary(pl.UTF-8):   Pliki nag≈Ç√≥wkowe dla ParaGUI
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	SDL-devel >= 1.2.6
@@ -50,19 +50,19 @@ Requires:	physfs-devel
 Header files for ParaGUI library - a complete GUI/Windowing system for
 SDL.
 
-%description devel -l pl
-Pliki nag≥Ûwkowe dla ParaGUI.
+%description devel -l pl.UTF-8
+Pliki nag≈Ç√≥wkowe dla ParaGUI.
 
 %package static
 Summary:	Static paragui library
-Summary(pl):	Statyczna biblioteka paragui
+Summary(pl.UTF-8):   Statyczna biblioteka paragui
 Group:		X11/Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 Static version of paragui library.
 
-%description static -l pl
+%description static -l pl.UTF-8
 Statyczna wersja biblioteki paragui.
 
 %prep
