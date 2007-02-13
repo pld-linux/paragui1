@@ -1,5 +1,5 @@
 Summary:	ParaGUI - A complete GUI/Windowing system for SDL
-Summary(pl.UTF-8):   ParaGUI - kompletne środowisko okienkowe dla SDL
+Summary(pl.UTF-8):	ParaGUI - kompletne środowisko okienkowe dla SDL
 Name:		paragui1
 Version:	1.0.4
 Release:	2
@@ -34,7 +34,7 @@ Kompletne środowisko okienkowe dla SDL.
 
 %package devel
 Summary:	Includes and more to develop SDL GUI applications
-Summary(pl.UTF-8):   Pliki nagłówkowe dla ParaGUI
+Summary(pl.UTF-8):	Pliki nagłówkowe dla ParaGUI
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	SDL-devel >= 1.2.6
@@ -55,7 +55,7 @@ Pliki nagłówkowe dla ParaGUI.
 
 %package static
 Summary:	Static paragui library
-Summary(pl.UTF-8):   Statyczna biblioteka paragui
+Summary(pl.UTF-8):	Statyczna biblioteka paragui
 Group:		X11/Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
